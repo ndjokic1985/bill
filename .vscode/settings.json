@@ -1,0 +1,6 @@
+{
+    "editor.formatOnSave": true,
+    "phpfmt.detect_indent": true,
+    "phpfmt.enable_auto_align": true,
+    "phpfmt.psr2": false
+}
