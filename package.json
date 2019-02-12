@@ -31,5 +31,8 @@
   },
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "jshint": "^2.10.1"
+  }
 }
