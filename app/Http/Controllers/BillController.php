@@ -24,7 +24,8 @@ class BillController extends Controller
 
     public function index()
     {
-
+        $bills = $this->billService->all();
+        return view('bill.index', compact('bills'));
     }
 
     public function create()
@@ -37,6 +38,7 @@ class BillController extends Controller
     public function store(BillRequest $request)
     {
         $this->billService->store($request->all());
+        return redirect('/bill')->with('success', 'Bill has been created');
     }
 
     public function show($id)

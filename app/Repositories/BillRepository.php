@@ -18,4 +18,9 @@ class BillRepository
         $this->bill->create($attributes);
     }
 
+    public function all()
+    {
+        return $this->bill->with('category')->get();
+    }
+
 }

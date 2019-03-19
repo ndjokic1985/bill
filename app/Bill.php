@@ -4,7 +4,8 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Bill extends Model {
+class Bill extends Model
+{
 
     /**
      * Table associated with model.
@@ -25,5 +26,9 @@ class Bill extends Model {
         'period',
     ];
 
+    public function category()
+    {
+        return $this->belongsTo('App\BillCategory', 'cat_id');
+    }
 
 }

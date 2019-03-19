@@ -29,4 +29,10 @@ class BillRequest extends FormRequest
             'period' => 'unique:bills',
         ];
     }
+    public function messages()
+    {
+        return [
+            'cat_id.required' => 'Category is required.',
+        ];
+    }
 }

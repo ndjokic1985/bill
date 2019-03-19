@@ -4,7 +4,8 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class BillCategory extends Model {
+class BillCategory extends Model
+{
 
     /**
      * Table associated with model.
@@ -22,4 +23,9 @@ class BillCategory extends Model {
         'name',
         'due_day',
     ];
+
+    public function bills()
+    {
+        return $this->hasMany('App\Bill');
+    }
 }

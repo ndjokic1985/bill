@@ -44,4 +44,9 @@ class BillService
         $period = $attributes['year'] . '-' . $month . '-01';
         return $period;
     }
+
+    public function all()
+    {
+        return $this->billRepository->all();
+    }
 }

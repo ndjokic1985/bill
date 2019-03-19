@@ -7,9 +7,10 @@
             @csrf
             <label for="cat_id">Category:</label>
             <select id="cat_id" name="cat_id">
-                <option value='' selecteds>Please select...</option>
+                <option value='' {{(old('cat_id')=='')?'selected':''}}>Please select...</option>
                 @foreach($categories as $category)
-                <option value="{{$category->id}}">{{$category->name}}</option>
+                <option {{(old('cat_id')==$category->id)?'selected':''}} value="{{$category->id}}">{{$category->name}}
+                </option>
                 @endforeach
             </select>
         </div>
