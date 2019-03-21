@@ -4,16 +4,15 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class BillRequest extends FormRequest
-{
+class BillRequest extends FormRequest {
+
     /**
      * Determine if the user is authorized to make this request.
      *
      * @return bool
      */
-    public function authorize()
-    {
-        return true;
+    public function authorize() {
+        return TRUE;
     }
 
     /**
@@ -21,16 +20,15 @@ class BillRequest extends FormRequest
      *
      * @return array
      */
-    public function rules()
-    {
+    public function rules() {
         return [
             'cat_id' => 'required',
             'amount' => 'required|numeric',
             'period' => 'unique:bills',
         ];
     }
-    public function messages()
-    {
+
+    public function messages() {
         return [
             'cat_id.required' => 'Category is required.',
         ];
