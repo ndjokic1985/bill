@@ -48,7 +48,8 @@ class BillController extends Controller {
     }
 
     public function destroy($id) {
-
+        $a = $this->billService->delete($id);
+        return redirect('/bill')->with('success', 'Bill has been successfully deleted.');
     }
 
     public function edit($id) {

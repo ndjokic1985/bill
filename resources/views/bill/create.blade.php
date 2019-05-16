@@ -33,7 +33,7 @@
                         <option {{($i==date('Y'))?'selected':''}} value="{{$i}}">{{$i}}</option>
                     @endfor
                 </select>
-                {{--<input type="hidden" id="period" value="{{date('Y')}}-{{date('m')}}-01" name="period">--}}
+                <input type="hidden" id="period" value="{{date('Y')}}-{{date('m')}}-01" name="period"/>
             </div>
             <div class="form-group">
                 <label for="paid">Paid:</label>

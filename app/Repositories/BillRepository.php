@@ -29,4 +29,8 @@ class BillRepository {
         return $bill->update($attributes);
     }
 
+    public function delete($id) {
+        return $this->bill->destroy($id);
+    }
+
 }

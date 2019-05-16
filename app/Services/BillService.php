@@ -55,4 +55,8 @@ class BillService {
         return $this->billRepository->update($attributes, $id);
     }
 
+    public function delete($id) {
+        return $this->billRepository->delete($id);
+    }
+
 }

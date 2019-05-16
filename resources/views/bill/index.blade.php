@@ -1,5 +1,9 @@
 @extends('layout.master')
 @section('content')
+    @include('includes.success')
+    <div style="margin-top: 10px;">
+        <a class="btn btn-dark" href="{{route('bill.create')}}">New Category</a>
+    </div>
     <table class="table table-striped">
         <thead>
         <tr>
@@ -21,7 +25,7 @@
                 <td>{{($bill->paid)?'paid':'not paid'}}</td>
                 <td><a href="{{route('bill.edit',$bill->id)}}" class="btn btn-primary">Edit</a></td>
                 <td>
-                    <form action="{{route('bill.update',$bill->id)}}" method="POST">
+                    <form action="{{route('bill.destroy',$bill->id)}}" method="POST">
                         @csrf
                         @method('DELETE')
                         <button class="btn btn-danger" type="submit">Delete</button>

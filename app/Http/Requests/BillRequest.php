@@ -24,7 +24,7 @@ class BillRequest extends FormRequest {
         return [
             'cat_id' => 'required',
             'amount' => 'required|numeric',
-            'period' => 'unique:bills',
+            /*'period' => 'unique:bills',*/
         ];
     }
 
